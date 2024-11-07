@@ -17,6 +17,7 @@
     "dist"
   ],
   "scripts": {
+    "dev": "vite",
     "ci": "conc \"pnpm run build\" \"pnpm run format\" \"pnpm run lint\" \"pnpm run check-exports\"",
     "build": "tsup",
     "format": "prettier --write .",
