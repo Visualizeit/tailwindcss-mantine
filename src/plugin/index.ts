@@ -28,6 +28,7 @@ export default plugin.withOptions<PluginOptions>(
 					fontSize: `var(--mantine-${size}-font-size)`,
 					lineHeight: `var(--mantine-${size}-line-height)`,
 					fontWeight: `var(--mantine-${size}-font-weight)`,
+					fontFamily: 'var(--mantine-font-family-headings)',
 				}
 			}
 
