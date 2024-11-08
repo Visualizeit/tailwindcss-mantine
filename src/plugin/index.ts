@@ -22,9 +22,9 @@ export default plugin.withOptions<PluginOptions>(
 
 			// Headings
 			for (const size in theme.headings.sizes) {
-				const tokenName = `${prefix}-${size.replace('h', 'heading')}`
+				const selector = `.${prefix}-${size.replace('h', 'heading')}`
 
-				components[`.${tokenName}`] = {
+				components[selector] = {
 					fontSize: `var(--mantine-${size}-font-size)`,
 					lineHeight: `var(--mantine-${size}-line-height)`,
 					fontWeight: `var(--mantine-${size}-font-weight)`,
