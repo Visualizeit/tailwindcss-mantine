@@ -12,7 +12,7 @@ if (container) {
 	ReactDOM.createRoot(container).render(
 		<React.StrictMode>
 			<MantineProvider theme={mantineTheme}>
-				<h1 className="m-heading1 text-m-primary-filled">Hello World</h1>
+				<h1 className="text-m-primary-filled">Hello World</h1>
 			</MantineProvider>
 		</React.StrictMode>,
 	)

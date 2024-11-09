@@ -5,7 +5,7 @@ import {
 	defaultCssVariablesResolver,
 } from '@mantine/core'
 import plugin from 'tailwindcss/plugin'
-import { type CSSRuleObject, type KeyValuePair } from 'tailwindcss/types/config'
+import { type KeyValuePair } from 'tailwindcss/types/config'
 
 interface PluginOptions {
 	themeOverride?: MantineThemeOverride
@@ -14,27 +14,7 @@ interface PluginOptions {
 const prefix = 'm'
 
 export default plugin.withOptions<PluginOptions>(
-	(options = {}) => {
-		const theme = mergeMantineTheme(DEFAULT_THEME, options.themeOverride)
-
-		return (api) => {
-			const components: CSSRuleObject = {}
-
-			// Headings
-			for (const size in theme.headings.sizes) {
-				const selector = `.${prefix}-${size.replace('h', 'heading')}`
-
-				components[selector] = {
-					fontSize: `var(--mantine-${size}-font-size)`,
-					lineHeight: `var(--mantine-${size}-line-height)`,
-					fontWeight: `var(--mantine-${size}-font-weight)`,
-					fontFamily: 'var(--mantine-font-family-headings)',
-				}
-			}
-
-			api.addComponents(components)
-		}
-	},
+	() => () => {},
 	(options) => {
 		const theme = mergeMantineTheme(DEFAULT_THEME, options.themeOverride)
 
