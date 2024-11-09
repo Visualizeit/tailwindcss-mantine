@@ -15,7 +15,7 @@ const prefix = 'm'
 
 export default plugin.withOptions<PluginOptions>(
 	() => () => {},
-	(options) => {
+	(options = {}) => {
 		const theme = mergeMantineTheme(DEFAULT_THEME, options.themeOverride)
 
 		const resolvedVariables = defaultCssVariablesResolver(theme)
