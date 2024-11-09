@@ -1,6 +1,6 @@
-import { createTheme } from '@mantine/core'
+import { createTheme, type MantineThemeOverride } from '@mantine/core'
 
-const mantineTheme = createTheme({
+const mantineTheme: MantineThemeOverride = createTheme({
 	defaultRadius: 'md',
 	activeClassName: 'active:brightness-90',
 })
