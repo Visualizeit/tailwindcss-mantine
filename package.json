@@ -3,7 +3,21 @@
   "version": "0.0.0",
   "type": "module",
   "author": "Visualizeit",
-  "description": "Integrate Mantine theme variables as Tailwind classes.",
+  "description": "A Tailwind CSS plugin for Mantine.",
+  "keywords": [
+    "tailwindcss",
+    "tailwind",
+    "mantine"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Visualizeit/tailwindcss-mantine",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Visualizeit/tailwindcss-mantine.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Visualizeit/tailwindcss-mantine/issues"
+  },
   "main": "dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
