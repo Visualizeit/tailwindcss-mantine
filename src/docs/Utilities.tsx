@@ -13,7 +13,7 @@ const Utilities = () => {
 			{Object.entries(THEME_CONFIG).map(([utilityName, value]) => (
 				<Stack key={utilityName}>
 					<Anchor
-						id={utilityName}
+						id={kebabCase(utilityName)}
 						className="scroll-mt-16"
 						href={`#${kebabCase(utilityName)}`}
 					>
