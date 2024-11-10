@@ -1,10 +1,11 @@
 import { Code, Table } from '@mantine/core'
 
 interface UtilitiesTableProps {
+	classPrefix: string
 	utilities: [className: string, properties: string][]
 }
 
-const UtilitiesTable = ({ utilities }: UtilitiesTableProps) => {
+const UtilitiesTable = ({ classPrefix, utilities }: UtilitiesTableProps) => {
 	return (
 		<Table stickyHeader stickyHeaderOffset={56}>
 			<Table.Thead>
@@ -17,7 +18,9 @@ const UtilitiesTable = ({ utilities }: UtilitiesTableProps) => {
 				{utilities.map(([className, properties]) => (
 					<Table.Tr key={className}>
 						<Table.Td>
-							<Code unstyled>{className}</Code>
+							<Code unstyled>
+								{classPrefix ? `${classPrefix}-${className}` : className}
+							</Code>
 						</Table.Td>
 						<Table.Td>
 							<Code unstyled>{properties}</Code>
