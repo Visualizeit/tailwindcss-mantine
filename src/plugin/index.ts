@@ -9,14 +9,15 @@ import { type KeyValuePair } from 'tailwindcss/types/config'
 
 interface PluginOptions {
 	themeOverride?: MantineThemeOverride
+	overrideDarkMode?: boolean
 }
 
 const prefix = 'm'
 
 export default plugin.withOptions<PluginOptions>(
 	() => () => {},
-	(options = {}) => {
-		const theme = mergeMantineTheme(DEFAULT_THEME, options.themeOverride)
+	({ themeOverride, overrideDarkMode = true } = {}) => {
+		const theme = mergeMantineTheme(DEFAULT_THEME, themeOverride)
 
 		const resolvedVariables = defaultCssVariablesResolver(theme)
 
@@ -140,6 +141,9 @@ export default plugin.withOptions<PluginOptions>(
 		}
 
 		return {
+			darkMode: overrideDarkMode
+				? ['selector', '[data-mantine-color-scheme="dark"]']
+				: undefined,
 			theme: {
 				extend: themeConfig,
 			},
