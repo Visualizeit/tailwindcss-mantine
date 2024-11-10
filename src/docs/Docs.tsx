@@ -1,12 +1,19 @@
-import { JsonInput } from '@mantine/core'
-import { type ThemeConfig } from 'tailwindcss/types/config'
-
-declare global {
-	const THEME_CONFIG: ThemeConfig
-}
+import { AppShell, Container, Stack } from '@mantine/core'
+import Utilities from './Utilities'
 
 const Docs = () => {
-	return <JsonInput autosize value={JSON.stringify(THEME_CONFIG)} />
+	return (
+		<AppShell header={{ height: 56 }} padding="xl">
+			<AppShell.Header />
+			<AppShell.Main>
+				<Container>
+					<Stack gap="xl">
+						<Utilities />
+					</Stack>
+				</Container>
+			</AppShell.Main>
+		</AppShell>
+	)
 }
 
 export default Docs
