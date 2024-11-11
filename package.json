@@ -40,7 +40,7 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "@arethetypeswrong/cli": "^0.16.4",
+    "@arethetypeswrong/cli": "^0.17.0",
     "@epic-web/config": "^1.15.0",
     "@mantine/core": "^7.13.3",
     "@mantine/hooks": "^7.13.3",
