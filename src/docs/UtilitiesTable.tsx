@@ -2,7 +2,7 @@ import { Code, Table } from '@mantine/core'
 
 interface UtilitiesTableProps {
 	classPrefix: string
-	utilities: [className: string, properties: string][]
+	utilities: [className: string, properties: string | [string, object]][]
 }
 
 const UtilitiesTable = ({ classPrefix, utilities }: UtilitiesTableProps) => {
@@ -23,7 +23,9 @@ const UtilitiesTable = ({ classPrefix, utilities }: UtilitiesTableProps) => {
 							</Code>
 						</Table.Td>
 						<Table.Td>
-							<Code unstyled>{properties}</Code>
+							<Code unstyled>
+								{Array.isArray(properties) ? properties[0] : properties}
+							</Code>
 						</Table.Td>
 					</Table.Tr>
 				))}

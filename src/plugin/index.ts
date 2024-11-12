@@ -25,7 +25,16 @@ export default plugin.withOptions<PluginOptions>(
 			scale: {} as KeyValuePair,
 			cursor: {} as KeyValuePair,
 			fontFamily: {} as KeyValuePair,
-			fontSize: {} as KeyValuePair,
+			fontSize: {} as KeyValuePair<
+				string,
+				[
+					string,
+					{
+						lineHeight: string
+						fontWeight: string
+					},
+				]
+			>,
 			lineHeight: {} as KeyValuePair,
 			fontWeight: {} as KeyValuePair,
 			colors: {} as KeyValuePair,
@@ -43,9 +52,13 @@ export default plugin.withOptions<PluginOptions>(
 			for (const size in theme.headings.sizes) {
 				const tokenName = `${prefix}-${size.replace('h', 'heading')}`
 
-				themeConfig.fontSize[tokenName] = `var(--mantine-${size}-font-size)`
-				themeConfig.lineHeight[tokenName] = `var(--mantine-${size}-line-height)`
-				themeConfig.fontWeight[tokenName] = `var(--mantine-${size}-font-weight)`
+				themeConfig.fontSize[tokenName] = [
+					`var(--mantine-${size}-font-size)`,
+					{
+						lineHeight: `var(--mantine-${size}-line-height)`,
+						fontWeight: `var(--mantine-${size}-font-weight)`,
+					},
+				]
 			}
 		}
 
@@ -60,7 +73,7 @@ export default plugin.withOptions<PluginOptions>(
 		}
 
 		interface TokenNameConfig {
-			tokens: Record<string, string>
+			tokens: Record<string, string | [string, object]>
 			searchValue: string
 			replaceValue?: string
 		}
