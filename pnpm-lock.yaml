@@ -77,6 +77,12 @@ importers:
       typescript:
         specifier: ^5.6.3
         version: 5.6.3
+      vike:
+        specifier: ^0.4.201
+        version: 0.4.201(react-streaming@0.3.43(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(vite@5.4.11(sugarss@4.0.1(postcss@8.4.49)))
+      vike-react:
+        specifier: ^0.5.7
+        version: 0.5.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vike@0.4.201(react-streaming@0.3.43(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(vite@5.4.11(sugarss@4.0.1(postcss@8.4.49))))
       vite:
         specifier: ^5.4.11
         version: 5.4.11(sugarss@4.0.1(postcss@8.4.49))
@@ -196,6 +202,21 @@ packages:
   '@babel/types@7.25.8':
     resolution: {integrity: sha512-JWtuCu8VQsMladxVz/P4HzHUGCAwpuqacmowgXFs5XjxIgKuNjnLokQzuVjlTvIzODaDmpjT3oxcC48vyk9EWg==}
     engines: {node: '>=6.9.0'}
+
+  '@brillout/import@0.2.3':
+    resolution: {integrity: sha512-1T8WlD75eeFSMrptGy8jiLHmfHgMmSjWvLOIUvHmSVZt+6k0eQqYUoK4KbmE4T9pVLIfxvZSOm2D68VEqKRHRw==}
+
+  '@brillout/json-serializer@0.5.13':
+    resolution: {integrity: sha512-9FpmgpuoSISw6fAPVB2qwW1dGAADN28YbWpfwOErfcZxpBH4lsnejuY89qcivInnWXYJvyyPwghCuOTbtuaYFg==}
+
+  '@brillout/picocolors@1.0.15':
+    resolution: {integrity: sha512-VrgvPtfnKP/i8kxCAyQVd0DWg6xU8OZJndbLf/lrywd96UdMhnGL/PK42HhHhhwkDSkaiQU+zc+OPWpvqOe4Cg==}
+
+  '@brillout/require-shim@0.1.2':
+    resolution: {integrity: sha512-3I4LRHnVZXoSAsEoni5mosq9l6eiJED58d9V954W4CIZ88AUfYBanWGBGbJG3NztaRTpFHEA6wB3Hn93BmmJdg==}
+
+  '@brillout/vite-plugin-server-entry@0.5.1':
+    resolution: {integrity: sha512-ZoXt8D/Z1E6e8ylKm5z8VzuxtIqPfLoWvsKkeK08LIpfCnRMxRJQLBZ1i3s9gGxE5+PvzY2dU5pBr7dL9aM8bg==}
 
   '@colors/colors@1.5.0':
     resolution: {integrity: sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ==}
@@ -965,6 +986,9 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
 
+  buffer-from@1.1.2:
+    resolution: {integrity: sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==}
+
   bundle-require@5.0.0:
     resolution: {integrity: sha512-GuziW3fSSmopcx4KRymQEJVbZUfqlCqcq7dvs6TYwKRZiegK/2buMxQTPs6MGlNv50wms1699qYO54R8XfRX4w==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
@@ -1201,6 +1225,9 @@ packages:
   es-iterator-helpers@1.1.0:
     resolution: {integrity: sha512-/SurEfycdyssORP/E+bj4sEu1CWw4EmLDsHynHwSXQ7utgbrMRWW195pTrCjFgFCddf/UkYm3oqKPRq5i8bJbw==}
     engines: {node: '>= 0.4'}
+
+  es-module-lexer@1.5.4:
+    resolution: {integrity: sha512-MVNK56NiMrOwitFB7cqDwq0CQutbw+0BvLshJSse0MUNU+y1FC3bUS/AQg7oUng+/wKrrki7JfmwtVHkVfPLlw==}
 
   es-object-atoms@1.0.0:
     resolution: {integrity: sha512-MZ4iQ6JwHOBQjahnjwaC1ZtIBH+2ohjamzAO3oaHcXYup7qxjF2fixyH+Q71voWHeOkI2q/TnJao/KfXYIZWbw==}
@@ -1662,6 +1689,10 @@ packages:
 
   isarray@2.0.5:
     resolution: {integrity: sha512-xHjhDr3cNBK0BzdUJSPXZntQUx/mwMS5Rw4A7lPJ90XGAO6ISP/ePDNuo0vhqOZU+UD5JoodwCAAoZQd3FeAKw==}
+
+  isbot-fast@1.2.0:
+    resolution: {integrity: sha512-twjuQzy2gKMDVfKGQyQqrx6Uy4opu/fiVUTTpdqtFsd7OQijIp5oXvb27n5EemYXaijh5fomndJt/SPRLsEdSg==}
+    engines: {node: '>=6.0.0'}
 
   isexe@2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
@@ -2161,6 +2192,12 @@ packages:
       '@types/react':
         optional: true
 
+  react-streaming@0.3.43:
+    resolution: {integrity: sha512-ULRCEEJu9bhMiupIR96dmE7i1j1+y7K/InE5uuF3AcP0iFFzsqdKLltGqB72ktOhfwn++iyWnzh1PHnKqR/xNw==}
+    peerDependencies:
+      react: '>=18'
+      react-dom: '>=18'
+
   react-style-singleton@2.2.1:
     resolution: {integrity: sha512-ZWj0fHEMyWkHzKYUr2Bs/4zU6XLmq9HsgBURm7g5pAVfyn49DgUiNgY2d4lXRlYSiCif9YBGpQleewkcqddc7g==}
     engines: {node: '>=10'}
@@ -2320,6 +2357,13 @@ packages:
 
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
+    engines: {node: '>=0.10.0'}
+
+  source-map-support@0.5.21:
+    resolution: {integrity: sha512-uBHU3L3czsIyYXKX88fdrGovxdSCoTGDRZ6SYXtSRxLZUzHg5P/66Ht6uoUlHu9EZod+inXhKo3qQgwXUT/y1w==}
+
+  source-map@0.6.1:
+    resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==}
     engines: {node: '>=0.10.0'}
 
   source-map@0.8.0-beta.0:
@@ -2613,6 +2657,24 @@ packages:
     resolution: {integrity: sha512-OljLrQ9SQdOUqTaQxqL5dEfZWrXExyyWsozYlAWFawPVNuD83igl7uJD2RTkNMbniIYgt8l81eCJGIdQF7avLQ==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
 
+  vike-react@0.5.7:
+    resolution: {integrity: sha512-loAf5t4QmSLenjpPKzk9P3Q4lhQVltg/ze0r3k3PpF3ehBJJiOfFWvKwpCi9kvt50hNnQcZgleem5itDqN/KsA==}
+    peerDependencies:
+      react: '>=18.0.0'
+      react-dom: '>=18.0.0'
+      vike: '>=0.4.182'
+
+  vike@0.4.201:
+    resolution: {integrity: sha512-T8Nvx31xSS28UC3N+jEb1PMiQr5tH5oBxhdH6HQNtgzDO7Hl21yaIaoCoCBThcuZvt9G3Nu0O+49Rtu28ybMrw==}
+    engines: {node: '>=18.0.0'}
+    hasBin: true
+    peerDependencies:
+      react-streaming: '>=0.3.42'
+      vite: '>=5.1.0'
+    peerDependenciesMeta:
+      react-streaming:
+        optional: true
+
   vite-tsconfig-paths@5.1.2:
     resolution: {integrity: sha512-gEIbKfJzSEv0yR3XS2QEocKetONoWkbROj6hGx0FHM18qKUojhvcokQsxQx5nMkelZq2n37zbSGCJn+FSODSjA==}
     peerDependencies:
@@ -2889,6 +2951,18 @@ snapshots:
       '@babel/helper-string-parser': 7.25.7
       '@babel/helper-validator-identifier': 7.25.7
       to-fast-properties: 2.0.0
+
+  '@brillout/import@0.2.3': {}
+
+  '@brillout/json-serializer@0.5.13': {}
+
+  '@brillout/picocolors@1.0.15': {}
+
+  '@brillout/require-shim@0.1.2': {}
+
+  '@brillout/vite-plugin-server-entry@0.5.1':
+    dependencies:
+      '@brillout/import': 0.2.3
 
   '@colors/colors@1.5.0':
     optional: true
@@ -3586,6 +3660,8 @@ snapshots:
       node-releases: 2.0.18
       update-browserslist-db: 1.1.1(browserslist@4.24.0)
 
+  buffer-from@1.1.2: {}
+
   bundle-require@5.0.0(esbuild@0.24.0):
     dependencies:
       esbuild: 0.24.0
@@ -3869,6 +3945,8 @@ snapshots:
       internal-slot: 1.0.7
       iterator.prototype: 1.1.3
       safe-array-concat: 1.1.2
+
+  es-module-lexer@1.5.4: {}
 
   es-object-atoms@1.0.0:
     dependencies:
@@ -4418,6 +4496,8 @@ snapshots:
 
   isarray@2.0.5: {}
 
+  isbot-fast@1.2.0: {}
+
   isexe@2.0.0: {}
 
   iterator.prototype@1.1.3:
@@ -4821,6 +4901,15 @@ snapshots:
     optionalDependencies:
       '@types/react': 18.3.12
 
+  react-streaming@0.3.43(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+    dependencies:
+      '@brillout/import': 0.2.3
+      '@brillout/json-serializer': 0.5.13
+      '@brillout/picocolors': 1.0.15
+      isbot-fast: 1.2.0
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
   react-style-singleton@2.2.1(@types/react@18.3.12)(react@18.3.1):
     dependencies:
       get-nonce: 1.0.1
@@ -5006,6 +5095,13 @@ snapshots:
       is-fullwidth-code-point: 5.0.0
 
   source-map-js@1.2.1: {}
+
+  source-map-support@0.5.21:
+    dependencies:
+      buffer-from: 1.1.2
+      source-map: 0.6.1
+
+  source-map@0.6.1: {}
 
   source-map@0.8.0-beta.0:
     dependencies:
@@ -5334,6 +5430,31 @@ snapshots:
   util-deprecate@1.0.2: {}
 
   validate-npm-package-name@5.0.1: {}
+
+  vike-react@0.5.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vike@0.4.201(react-streaming@0.3.43(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(vite@5.4.11(sugarss@4.0.1(postcss@8.4.49)))):
+    dependencies:
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      react-streaming: 0.3.43(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      vike: 0.4.201(react-streaming@0.3.43(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(vite@5.4.11(sugarss@4.0.1(postcss@8.4.49)))
+
+  vike@0.4.201(react-streaming@0.3.43(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(vite@5.4.11(sugarss@4.0.1(postcss@8.4.49))):
+    dependencies:
+      '@brillout/import': 0.2.3
+      '@brillout/json-serializer': 0.5.13
+      '@brillout/picocolors': 1.0.15
+      '@brillout/require-shim': 0.1.2
+      '@brillout/vite-plugin-server-entry': 0.5.1
+      acorn: 8.14.0
+      cac: 6.7.14
+      es-module-lexer: 1.5.4
+      esbuild: 0.21.5
+      fast-glob: 3.3.2
+      semver: 7.6.3
+      source-map-support: 0.5.21
+      vite: 5.4.11(sugarss@4.0.1(postcss@8.4.49))
+    optionalDependencies:
+      react-streaming: 0.3.43(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
 
   vite-tsconfig-paths@5.1.2(typescript@5.6.3)(vite@5.4.11(sugarss@4.0.1(postcss@8.4.49))):
     dependencies:
