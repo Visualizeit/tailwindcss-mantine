@@ -3,7 +3,6 @@ import vikeReact from 'vike-react/config'
 
 const config: Config = {
 	extends: vikeReact,
-	ssr: false,
 	title: 'tailwindcss-mantine',
 	favicon: '/vite.svg',
 }

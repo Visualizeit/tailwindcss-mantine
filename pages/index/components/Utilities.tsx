@@ -3,10 +3,6 @@ import { kebabCase } from 'scule'
 import { type ThemeConfig } from 'tailwindcss/types/config'
 import UtilitiesTable from './UtilitiesTable'
 
-declare global {
-	const THEME_CONFIG: ThemeConfig
-}
-
 const utilityClassMap: Record<string, string> = {
 	scale: 'scale',
 	cursor: 'cursor',
@@ -22,10 +18,14 @@ const utilityClassMap: Record<string, string> = {
 	zIndex: 'z',
 }
 
-const Utilities = () => {
+interface UtilitiesProps {
+	themeConfig: ThemeConfig
+}
+
+const Utilities = ({ themeConfig }: UtilitiesProps) => {
 	return (
 		<Stack>
-			{Object.entries(THEME_CONFIG).map(([utilityName, value]) => {
+			{Object.entries(themeConfig).map(([utilityName, value]) => {
 				const prefix = utilityClassMap[utilityName] ?? utilityName
 
 				return (
