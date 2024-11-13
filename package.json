@@ -34,6 +34,7 @@
     "dev": "vite",
     "ci": "conc \"pnpm run build\" \"pnpm run format\" \"pnpm run lint\" \"pnpm run check-exports\"",
     "build": "tsup",
+    "build:docs": "vite build",
     "format": "prettier --write .",
     "lint": "eslint .",
     "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
