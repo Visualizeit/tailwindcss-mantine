@@ -1,13 +1,5 @@
-import { type ThemeConfig } from 'tailwindcss/types/config'
-import invariant from 'tiny-invariant'
-import mantinePlugin from '../../plugin'
+import getThemeConfig from '@/helpers/getThemeConfig'
 
-export const data = () => {
-	const plugin = mantinePlugin({})
-
-	invariant(plugin.config?.theme?.extend, 'theme is required')
-
-	return plugin.config.theme.extend as ThemeConfig
-}
+export const data = () => getThemeConfig()
 
 export type Data = ReturnType<typeof data>
