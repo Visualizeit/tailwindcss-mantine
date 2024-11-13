@@ -5,7 +5,9 @@ const Installation = () => {
 	return (
 		<Stack component="section">
 			<AnchorTitle id="installation">Installation</AnchorTitle>
-			<Code block>npm i tailwindcss-mantine</Code>
+			<Code block className="text-m-sm">
+				npm i tailwindcss-mantine
+			</Code>
 		</Stack>
 	)
 }
