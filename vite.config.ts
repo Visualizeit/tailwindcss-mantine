@@ -2,7 +2,7 @@ import react from '@vitejs/plugin-react'
 import vike from 'vike/plugin'
 import { defineConfig } from 'vite'
 import tsconfigPaths from 'vite-tsconfig-paths'
-import mantinePlugin from './src/plugin'
+import mantinePlugin from './plugin'
 
 // https://vitejs.dev/config/
 export default defineConfig({

@@ -9,8 +9,8 @@
 		"strict": true
 	},
 	"include": [
-		"src/configs",
-		"src/plugin",
+		"configs",
+		"plugin",
 		"vite.config.ts",
 		"tailwind.config.ts",
 		"tsup.config.ts"
