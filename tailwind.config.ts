@@ -3,7 +3,7 @@ import mantineTheme from './configs/mantineTheme'
 import mantinePlugin from './plugin'
 
 const config: Config = {
-	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+	content: ['./index.html', './pages/**/*.{js,ts,jsx,tsx}'],
 	theme: {
 		extend: {},
 	},
