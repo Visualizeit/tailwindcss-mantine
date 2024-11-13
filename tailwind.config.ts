@@ -1,5 +1,6 @@
 import { type Config } from 'tailwindcss'
-import mantineTheme from './configs/mantineTheme'
+import getSafelist from './helpers/getSafelist'
+import mantineTheme from './helpers/mantineTheme'
 import mantinePlugin from './plugin'
 
 const config: Config = {
@@ -8,6 +9,7 @@ const config: Config = {
 		extend: {},
 	},
 	plugins: [mantinePlugin({ themeOverride: mantineTheme })],
+	safelist: getSafelist(),
 }
 
 export default config

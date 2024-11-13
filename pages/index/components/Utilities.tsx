@@ -2,21 +2,7 @@ import { Anchor, Stack, Title } from '@mantine/core'
 import { kebabCase } from 'scule'
 import { type ThemeConfig } from 'tailwindcss/types/config'
 import UtilitiesTable from './UtilitiesTable'
-
-const utilityClassMap: Record<string, string> = {
-	scale: 'scale',
-	cursor: 'cursor',
-	fontFamily: 'font',
-	fontSize: 'text',
-	lineHeight: 'leading',
-	fontWeight: 'font',
-	colors: '{property}',
-	spacing: '{property}',
-	screens: '',
-	borderRadius: 'rounded',
-	boxShadow: 'shadow',
-	zIndex: 'z',
-}
+import utilityClassMap from '@/helpers/utilityClassMap'
 
 interface UtilitiesProps {
 	themeConfig: ThemeConfig

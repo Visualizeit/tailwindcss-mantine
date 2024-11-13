@@ -9,7 +9,7 @@
 		"strict": true
 	},
 	"include": [
-		"configs",
+		"helpers",
 		"plugin",
 		"vite.config.ts",
 		"tailwind.config.ts",

@@ -1,6 +1,6 @@
 import { MantineProvider } from '@mantine/core'
 import { type PropsWithChildren } from 'react'
-import mantineTheme from '../configs/mantineTheme'
+import mantineTheme from '../helpers/mantineTheme'
 
 import '@mantine/core/styles.css'
 import './index.css'
