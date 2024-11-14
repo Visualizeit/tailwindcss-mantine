@@ -52,13 +52,18 @@ export default plugin.withOptions<PluginOptions>(
 			for (const size in theme.headings.sizes) {
 				const tokenName = `${prefix}-${size.replace('h', 'heading')}`
 
+				const lineHeight = `var(--mantine-${size}-line-height)`,
+					fontWeight = `var(--mantine-${size}-font-weight)`
+
 				themeConfig.fontSize[tokenName] = [
 					`var(--mantine-${size}-font-size)`,
 					{
-						lineHeight: `var(--mantine-${size}-line-height)`,
-						fontWeight: `var(--mantine-${size}-font-weight)`,
+						lineHeight,
+						fontWeight,
 					},
 				]
+				themeConfig.lineHeight[tokenName] = `var(--mantine-${size}-line-height)`
+				themeConfig.fontWeight[tokenName] = `var(--mantine-${size}-font-weight)`
 			}
 		}
 
