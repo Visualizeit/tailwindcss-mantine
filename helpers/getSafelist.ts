@@ -4,15 +4,19 @@ import utilityClassMap from './utilityClassMap'
 const getSafelist = () => {
 	const themeConfig = getThemeConfig()
 
-	return Object.entries(themeConfig).flatMap(([utilityName, value]) => {
-		const prefix = utilityClassMap[utilityName] ?? utilityName
+	const safelist = Object.entries(themeConfig).flatMap(
+		([utilityName, value]) => {
+			const template = utilityClassMap[utilityName] ?? utilityName
 
-		const utilities = Object.entries(value)
+			const utilities = Object.entries(value)
 
-		return utilities.map(([className]) =>
-			prefix ? `${prefix}-${className}` : className,
-		)
-	})
+			return utilities.map(([className]) =>
+				template ? template.replace('%s', className) : className,
+			)
+		},
+	)
+
+	return safelist
 }
 
 export default getSafelist

@@ -11,7 +11,7 @@ export const Page = () => {
 		<AppShell header={{ height: 56 }} padding="xl">
 			<AppShell.Header />
 			<AppShell.Main>
-				<Container>
+				<Container className="m-md:w-0">
 					<Stack gap="xl">
 						<Installation />
 						<Divider />

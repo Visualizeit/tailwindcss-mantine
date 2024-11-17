@@ -1,11 +1,11 @@
 import { Table, Code, HoverCard, ColorSwatch, Group } from '@mantine/core'
 
 interface UtilitiesTableProps {
-	classPrefix: string
+	classTemplate: string
 	utilities: [className: string, properties: string | [string, object]][]
 }
 
-const UtilitiesTable = ({ classPrefix, utilities }: UtilitiesTableProps) => {
+const UtilitiesTable = ({ classTemplate, utilities }: UtilitiesTableProps) => {
 	return (
 		<Table stickyHeader stickyHeaderOffset={56}>
 			<Table.Thead>
@@ -33,7 +33,9 @@ const UtilitiesTable = ({ classPrefix, utilities }: UtilitiesTableProps) => {
 						<Table.Tr key={className}>
 							<Table.Td>
 								<Code unstyled>
-									{classPrefix ? `${classPrefix}-${className}` : className}
+									{classTemplate
+										? classTemplate.replace('%s', className)
+										: className}
 								</Code>
 							</Table.Td>
 							<Table.Td>

@@ -32,11 +32,12 @@
   ],
   "scripts": {
     "dev": "vite",
-    "ci": "conc \"pnpm run build\" \"pnpm run format\" \"pnpm run lint\" \"pnpm run check-exports\"",
+    "ci": "conc \"pnpm run build\" \"pnpm run format\" \"pnpm run lint\" \"pnpm run test\" \"pnpm run check-exports\"",
     "build": "tsup",
     "build:docs": "vite build",
     "format": "prettier --write .",
     "lint": "eslint .",
+    "test": "vitest run",
     "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
     "prepare": "husky"
   },
@@ -45,6 +46,7 @@
     "@epic-web/config": "^1.15.0",
     "@mantine/core": "^7.13.3",
     "@mantine/hooks": "^7.13.3",
+    "@types/node": "^22.9.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.3",
@@ -67,7 +69,8 @@
     "vike": "^0.4.201",
     "vike-react": "^0.5.7",
     "vite": "^5.4.11",
-    "vite-tsconfig-paths": "^5.1.2"
+    "vite-tsconfig-paths": "^5.1.2",
+    "vitest": "^2.1.5"
   },
   "lint-staged": {
     "*.{md,html,css}": "prettier --write",

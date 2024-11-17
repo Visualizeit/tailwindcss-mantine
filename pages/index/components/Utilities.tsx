@@ -15,7 +15,7 @@ const Utilities = ({ themeConfig }: UtilitiesProps) => {
 			<AnchorTitle id="utilities">Utilities</AnchorTitle>
 			<Stack>
 				{Object.entries(themeConfig).map(([utilityName, value]) => {
-					const prefix = utilityClassMap[utilityName] ?? utilityName
+					const template = utilityClassMap[utilityName] ?? utilityName
 
 					return (
 						<Stack key={utilityName}>
@@ -23,7 +23,7 @@ const Utilities = ({ themeConfig }: UtilitiesProps) => {
 								{kebabCase(utilityName)}
 							</AnchorTitle>
 							<UtilitiesTable
-								classPrefix={prefix}
+								classTemplate={template}
 								utilities={Object.entries(value)}
 							/>
 						</Stack>
