@@ -1,4 +1,15 @@
-import { AppShell, Container, Divider, Stack } from '@mantine/core'
+import {
+	ActionIcon,
+	Anchor,
+	AppShell,
+	Container,
+	Divider,
+	Group,
+	Stack,
+	Title,
+	Tooltip,
+} from '@mantine/core'
+import { IconBrandGithub } from '@tabler/icons-react'
 import { useData } from 'vike-react/useData'
 import { type Data } from './+data'
 import Installation from './components/Installation'
@@ -9,7 +20,28 @@ export const Page = () => {
 
 	return (
 		<AppShell header={{ height: 56 }} padding="xl">
-			<AppShell.Header />
+			<AppShell.Header>
+				<Group
+					className="h-full"
+					justify="space-between"
+					align="center"
+					px="md"
+				>
+					<Anchor className="text-m-text" href="/">
+						<Title order={3}>tailwindcss-mantine</Title>
+					</Anchor>
+					<Tooltip label="GitHub repository">
+						<Anchor
+							href="https://github.com/Visualizeit/tailwindcss-mantine"
+							target="_blank"
+						>
+							<ActionIcon variant="default" size="lg">
+								<IconBrandGithub />
+							</ActionIcon>
+						</Anchor>
+					</Tooltip>
+				</Group>
+			</AppShell.Header>
 			<AppShell.Main>
 				<Container className="m-md:w-0">
 					<Stack gap="xl">

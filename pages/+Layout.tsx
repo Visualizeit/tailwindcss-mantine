@@ -6,5 +6,9 @@ import '@mantine/core/styles.css'
 import './index.css'
 
 export const Layout = ({ children }: PropsWithChildren<{}>) => {
-	return <MantineProvider theme={mantineTheme}>{children}</MantineProvider>
+	return (
+		<MantineProvider defaultColorScheme="auto" theme={mantineTheme}>
+			{children}
+		</MantineProvider>
+	)
 }
