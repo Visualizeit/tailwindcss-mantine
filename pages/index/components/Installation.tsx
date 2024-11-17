@@ -1,5 +1,5 @@
-import { CodeHighlight } from '@mantine/code-highlight'
 import { Stack, Text, Alert } from '@mantine/core'
+import { CodeHighlight } from '@mantinex/shiki'
 import AnchorTitle from './AnchorTitle'
 
 const tailwindConfigCode = `
@@ -20,11 +20,12 @@ const Installation = () => {
 			<ol className="list-decimal space-y-m-lg *:space-y-m-sm">
 				<li>
 					<Text>Install the package from npm:</Text>
-					<CodeHighlight code="npm i -D tailwindcss-mantine" language="bash" />
+					<CodeHighlight language="bash" code="npm i -D tailwindcss-mantine" />
 				</li>
 				<li>
 					<Text>Add the plugin and theme override to tailwind.config.js:</Text>
-					<CodeHighlight code={tailwindConfigCode} />
+					{/* @ts-expect-error */}
+					<CodeHighlight language="javascript" code={tailwindConfigCode} />
 					<Alert color="yellow">
 						tailwindcss-mantine is a native ESM package and does not provide
 						CommonJS exports.
