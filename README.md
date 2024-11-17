@@ -35,7 +35,7 @@ exports.
 
 Add Mantine's utility classes to your HTML:
 
-[check all the utility classes here](http://localhost:3000/#utilities)
+[check all the utility classes here](https://tailwindcss-mantine.pages.dev/#utilities)
 
 ```html
 <h1 className="m-m-md text-m-heading1 text-m-primary-filled">Hello World</h1>
