@@ -12,6 +12,7 @@ import {
 import { IconBrandGithub } from '@tabler/icons-react'
 import { useData } from 'vike-react/useData'
 import { type Data } from './+data'
+import About from './components/About'
 import Installation from './components/Installation'
 import Utilities from './components/Utilities'
 
@@ -19,7 +20,7 @@ export const Page = () => {
 	const themeConfig = useData<Data>()
 
 	return (
-		<AppShell header={{ height: 56 }} padding="xl">
+		<AppShell header={{ height: 56 }} padding="sm">
 			<AppShell.Header>
 				<Group
 					className="h-full"
@@ -43,8 +44,10 @@ export const Page = () => {
 				</Group>
 			</AppShell.Header>
 			<AppShell.Main>
-				<Container className="m-md:w-0">
+				<Container>
 					<Stack gap="xl">
+						<About />
+						<Divider />
 						<Installation />
 						<Divider />
 						<Utilities themeConfig={themeConfig} />

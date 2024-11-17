@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "type": "module",
   "author": "Visualizeit",
-  "description": "A Tailwind CSS plugin for Mantine.",
+  "description": "A plugin that integrates Mantine's theme variables into Tailwind CSS.",
   "keywords": [
     "tailwindcss",
     "tailwind",
@@ -44,6 +44,7 @@
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.17.0",
     "@epic-web/config": "^1.15.0",
+    "@mantine/code-highlight": "^7.14.1",
     "@mantine/core": "^7.13.3",
     "@mantine/hooks": "^7.13.3",
     "@tabler/icons-react": "^3.22.0",
