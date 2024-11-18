@@ -1,4 +1,4 @@
-import { Stack, Text, Code, Alert } from '@mantine/core'
+import { Stack, Text, Code } from '@mantine/core'
 import AnchorTitle from './AnchorTitle'
 
 const installationCode = `<span class="line"><span style="color:#6F42C1">npm</span><span style="color:#032F62"> i</span><span style="color:#005CC5"> -D</span><span style="color:#032F62"> tailwindcss-mantine</span></span>`
@@ -32,10 +32,6 @@ const Installation = () => {
 						className="bg-white text-m-sm"
 						dangerouslySetInnerHTML={{ __html: tailwindConfigCode }}
 					/>
-					<Alert color="yellow">
-						tailwindcss-mantine is a native ESM package and does not provide
-						CommonJS exports.
-					</Alert>
 				</li>
 			</ol>
 		</Stack>
