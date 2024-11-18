@@ -39,14 +39,16 @@
     "lint": "eslint .",
     "test": "vitest run",
     "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
+    "local-release": "changeset version && changeset publish",
+    "prepublishOnly": "pnpm run ci",
     "prepare": "husky"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.17.0",
+    "@changesets/cli": "^2.27.9",
     "@epic-web/config": "^1.15.0",
     "@mantine/core": "^7.14.1",
     "@mantine/hooks": "^7.14.1",
-    "@mantinex/shiki": "^1.0.3",
     "@tabler/icons-react": "^3.22.0",
     "@types/node": "^22.9.0",
     "@types/react": "^18.3.12",

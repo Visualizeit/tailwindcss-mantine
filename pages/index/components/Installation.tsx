@@ -1,17 +1,16 @@
-import { Stack, Text, Alert } from '@mantine/core'
-import { CodeHighlight } from '@mantinex/shiki'
+import { Stack, Text, Code, Alert } from '@mantine/core'
 import AnchorTitle from './AnchorTitle'
 
-const tailwindConfigCode = `
-import mantinePlugin from 'tailwindcss-mantine'
-import mantineTheme from 'your mantine theme override'
+const installationCode = `<span class="line"><span style="color:#6F42C1">npm</span><span style="color:#032F62"> i</span><span style="color:#005CC5"> -D</span><span style="color:#032F62"> tailwindcss-mantine</span></span>`
 
-/** @type {import('tailwindcss').Config} */
-export default {
-	//...
-	plugins: [mantinePlugin({ themeOverride: mantineTheme })],
-}
-`
+const tailwindConfigCode = `<span class="line"><span style="color:#D73A49">import</span><span style="color:#24292E"> mantinePlugin </span><span style="color:#D73A49">from</span><span style="color:#032F62"> 'tailwindcss-mantine'</span></span>
+<span class="line"><span style="color:#D73A49">import</span><span style="color:#24292E"> mantineTheme </span><span style="color:#D73A49">from</span><span style="color:#032F62"> 'your mantine theme override'</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">/** </span><span style="color:#D73A49">@type</span><span style="color:#6F42C1"> {import('tailwindcss').Config}</span><span style="color:#6A737D"> */</span></span>
+<span class="line"><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#6A737D">	//...</span></span>
+<span class="line"><span style="color:#24292E">	plugins: [</span><span style="color:#6F42C1">mantinePlugin</span><span style="color:#24292E">({ themeOverride: mantineTheme })],</span></span>
+<span class="line"><span style="color:#24292E">}</span></span>`
 
 const Installation = () => {
 	return (
@@ -20,12 +19,19 @@ const Installation = () => {
 			<ol className="list-decimal space-y-m-lg *:space-y-m-sm">
 				<li>
 					<Text>Install the package from npm:</Text>
-					<CodeHighlight language="bash" code="npm i -D tailwindcss-mantine" />
+					<Code
+						block
+						className="bg-white text-m-sm"
+						dangerouslySetInnerHTML={{ __html: installationCode }}
+					/>
 				</li>
 				<li>
 					<Text>Add the plugin and theme override to tailwind.config.js:</Text>
-					{/* @ts-expect-error */}
-					<CodeHighlight language="javascript" code={tailwindConfigCode} />
+					<Code
+						block
+						className="bg-white text-m-sm"
+						dangerouslySetInnerHTML={{ __html: tailwindConfigCode }}
+					/>
 					<Alert color="yellow">
 						tailwindcss-mantine is a native ESM package and does not provide
 						CommonJS exports.
