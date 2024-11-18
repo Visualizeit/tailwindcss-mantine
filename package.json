@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-mantine",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "type": "module",
   "author": "Visualizeit",
   "description": "A plugin that integrates Mantine's theme variables into Tailwind CSS.",
@@ -39,10 +39,13 @@
     "lint": "eslint .",
     "test": "vitest run",
     "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
+    "local-release": "changeset version && changeset publish",
+    "prepublishOnly": "pnpm run ci",
     "prepare": "husky"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.17.0",
+    "@changesets/cli": "^2.27.9",
     "@epic-web/config": "^1.15.0",
     "@mantine/core": "^7.14.1",
     "@mantine/hooks": "^7.14.1",
