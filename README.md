@@ -28,9 +28,6 @@ export default {
 }
 ```
 
-tailwindcss-mantine is a native ESM package and does not provide CommonJS
-exports.
-
 ## Usage
 
 Add Mantine's utility classes to your HTML:

@@ -18,13 +18,18 @@
   "bugs": {
     "url": "https://github.com/Visualizeit/tailwindcss-mantine/issues"
   },
-  "main": "dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "dist/index.cjs",
+  "types": "./dist/index.d.cts",
   "exports": {
-    "./package.json": "./package.json",
     ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "import": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "require": {
+        "default": "./dist/index.cjs",
+        "types": "./dist/index.d.cts"
+      }
     }
   },
   "files": [
@@ -38,7 +43,7 @@
     "format": "prettier --write .",
     "lint": "eslint .",
     "test": "vitest run",
-    "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
+    "check-exports": "attw --pack .",
     "local-release": "changeset version && changeset publish",
     "prepublishOnly": "pnpm run ci",
     "prepare": "husky"
